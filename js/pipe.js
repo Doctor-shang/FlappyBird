@@ -32,6 +32,7 @@
             game.score++; //加分
             this.alreadypass = true; //标记已经越过
         }
+        
     }
     Pipe.prototype.init = function(){
         game.ctx.drawImage(this.pipe1t, this.x,this.height - 500);

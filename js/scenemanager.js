@@ -125,6 +125,10 @@
                     game.pipeArr[i].move()
                     
                 }
+                //当管子多于5根时,删除最早出现的管子,避免后期运算量大
+                if (game.pipeArr.length > 5) {
+                    game.pipeArr.shift();
+                }
                 break;
             case 4:
                 this.downstep ++;
@@ -183,6 +187,7 @@
                         that.enter(1);
                         that.downstep = -3;
                         game.fno = 0;
+                        game.score = 0;
                         clearInterval(game.timer)
                         // game.bird.type = 0
                         game.start()

@@ -86,9 +86,8 @@
         this.timer = setInterval(function(){
             //清屏
             that.ctx.clearRect(0,0,that.canvas.width,that.canvas.height);
-
-            that.sm.init();
             that.sm.update();
+            that.sm.init();
             //帧编号
             that.fno++;
             that.ctx.font = '16px 微软雅黑';
